@@ -1,0 +1,11 @@
+binaryornot
+cookiecutter
+black
+coverage
+pylint
+pytest
+pytest-cov
+pytest_cases
+pytest-cookies
+pytest-xdist
+pyyaml
