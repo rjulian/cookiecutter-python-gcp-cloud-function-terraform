@@ -2,8 +2,9 @@
     "function_name": "gcp_function",
     "gcp_project_name": "",
     "gcp_region": "us-central1",
-    "gcp_service_account_name": "{{cookiecutter.function_name|replace('_', '-')}}-service-account"
-    "project_description": "GCP Cloud Function that accomplishes something.",
+    "gcp_service_account_name": "{{cookiecutter.function_name|replace('_', '-')}}-service-account",
+    "gcp_function_bucket": "{{cookiecutter.function_name|replace('_', '-')}}-function-bucket",
+    "function_description": "GCP Cloud Function that accomplishes something.",
     "gcp_python_runtime": [
       "3.11",
       "3.10",

@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "bucket" {
-  name                        = "{{cookiecutter.function_name}}-gcf-source" 
+  name                        = "{{cookiecutter.gcp_function_bucket}}"
   location                    = "US"
   uniform_bucket_level_access = true
 }

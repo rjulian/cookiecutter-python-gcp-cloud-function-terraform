@@ -1,6 +1,8 @@
+.PHONY: install test lint clean build deploy format venv
 SHELL = bash 
 PYTHON_SOURCE = {{cookiecutter.function_name}}
 
+all: venv install clean format lint test build deploy 
 
 install:
 	pip install -r requirements.txt
@@ -19,6 +21,10 @@ clean:
 build: clean
 	mkdir build
 	zip -j build/$(PYTHON_SOURCE).zip $(PYTHON_SOURCE)/*
+
+deploy: 
+	terraform -chdir=terraform/ init
+	terraform -chdir=terraform/ apply
 
 format:
 	black $(PYTHON_SOURCE)

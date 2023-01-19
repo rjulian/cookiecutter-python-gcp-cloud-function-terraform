@@ -1,6 +1,6 @@
 resource "google_cloudfunctions_function" "function" {
   name                  = "{{cookiecutter.function_name}}"
-  description           = "{{cookiecutter.project_description}}"
+  description           = "{{cookiecutter.function_description}}"
   runtime               = "python39"
   entry_point           = "hello_world"
   source_archive_bucket = google_storage_bucket.bucket.name
