@@ -7,5 +7,5 @@ resource "google_storage_bucket" "bucket" {
 resource "google_storage_bucket_object" "object" {
   name   = "{{cookiecutter.function_name}}.zip"
   bucket = google_storage_bucket.bucket.name
-  source = "../deploy/{{cookiecutter.function_name}}.zip" 
+  source = "../build/{{cookiecutter.function_name}}.zip" 
 }

@@ -12,6 +12,14 @@ test:
 lint: 
 	pylint $(PYTHON_SOURCE) 
 
+clean:
+	coverage erase
+	rm -rf build/
+
+build: clean
+	mkdir build
+	zip -j build/$(PYTHON_SOURCE).zip $(PYTHON_SOURCE)/*
+
 format:
 	black $(PYTHON_SOURCE)
 
