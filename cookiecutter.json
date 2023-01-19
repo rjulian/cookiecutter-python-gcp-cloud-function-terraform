@@ -1,7 +1,7 @@
 {
-    "python_function_name": "gcp-function",
+    "function_name": "gcp_function",
     "gcp_project_name": "",
-    "project_description": "This is my click command-line app project.",
+    "project_description": "GCP Cloud Function that accomplishes something.",
     "gcp_python_runtime": [
       "3.11",
       "3.10",

@@ -4,6 +4,10 @@ PYTHON_SOURCE = {{cookiecutter.function_name}}
 
 install:
 	pip install -r requirements.txt
+	pip install -r $(PYTHON_SOURCE)/requirements.txt
+
+test:
+	py.test --cov-report term --cov=$(PYTHON_SOURCE) tests/
 
 lint: 
 	pylint $(PYTHON_SOURCE) 
