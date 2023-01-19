@@ -1,4 +1,4 @@
-SHELL = zsh 
+SHELL = bash 
 PYTHON_SOURCE = {{cookiecutter.function_name}}
 
 
