@@ -1,5 +1,11 @@
 {
     "function_name": "gcp_function",
+    "function_trigger": [
+        "http",
+        "cloud storage",
+        "pub/sub",
+        "firestore"
+    ],
     "gcp_project_name": "",
     "gcp_region": "us-central1",
     "gcp_service_account_name": "{{cookiecutter.function_name|replace('_', '-')}}-service-account",
