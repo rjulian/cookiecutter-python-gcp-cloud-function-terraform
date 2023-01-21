@@ -28,5 +28,7 @@ resource "google_cloudfunctions_function" "function" {
   service_account_email = google_service_account.sa.email
   available_memory_mb   = 256
 
-  function_trigger_http = true
+  {% if cookiecutter.function_trigger == "http" %}
+  trigger_http = true
+  {% endif %}
 }
